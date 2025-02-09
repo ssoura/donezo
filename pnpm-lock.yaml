@@ -24,9 +24,6 @@ importers:
       '@ai-sdk/google':
         specifier: ^1.1.11
         version: 1.1.11(zod@3.24.1)
-      '@ai-sdk/groq':
-        specifier: ^1.1.7
-        version: 1.1.7(zod@3.24.1)
       '@ai-sdk/openai-compatible':
         specifier: ^0.1.8
         version: 0.1.8(zod@3.24.1)
@@ -135,12 +132,6 @@ importers:
       framer-motion:
         specifier: ^12.4.0
         version: 12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      groq:
-        specifier: ^3.72.1
-        version: 3.74.1
-      groq-sdk:
-        specifier: ^0.12.0
-        version: 0.12.0
       langchain:
         specifier: ^0.3.12
         version: 0.3.15(@langchain/core@0.3.39(openai@4.83.0(zod@3.24.1)))(openai@4.83.0(zod@3.24.1))
@@ -297,12 +288,6 @@ packages:
 
   '@ai-sdk/google@1.1.11':
     resolution: {integrity: sha512-EcK20MTA3zNJKNOo3r52Y0N960lGL6UxUimt13HFk2RJ4dXPMWl7ZhWFgjwFXwW2QwdSPKqlMHYjne3xvKTBcQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.0.0
-
-  '@ai-sdk/groq@1.1.7':
-    resolution: {integrity: sha512-OavkZPF42QcJUltw8N/AXmRJvHBCf+I3Nx0FFywzN8xanEEtHothdMv6qDn0nwta+5itd+DEPI+/tLTIplmsMw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -3413,13 +3398,6 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  groq-sdk@0.12.0:
-    resolution: {integrity: sha512-X8ogAHYJ0pfDFAzTxSmfTCac0GznA1Ypd6t8to2SL236FY2tPSOZrOhIBAobPx+oey/6WI96MbvT6VvvjCDTCQ==}
-
-  groq@3.74.1:
-    resolution: {integrity: sha512-nQq2qlCTFNhkBZJ4tHY1tXQHEZDlqg/iFOtQIF5PEJNqrTG7/GQrHKwKlTjfcbq+qnJys2t45qVn10uLZAteZA==}
-    engines: {node: '>=18'}
-
   hanji@0.0.5:
     resolution: {integrity: sha512-Abxw1Lq+TnYiL4BueXqMau222fPSPMFtya8HdpWsz/xVAhifXou71mPh/kY2+08RgFcVccjG3uZHs6K5HAe3zw==}
 
@@ -5324,12 +5302,6 @@ snapshots:
       zod: 3.24.1
 
   '@ai-sdk/google@1.1.11(zod@3.24.1)':
-    dependencies:
-      '@ai-sdk/provider': 1.0.7
-      '@ai-sdk/provider-utils': 2.1.6(zod@3.24.1)
-      zod: 3.24.1
-
-  '@ai-sdk/groq@1.1.7(zod@3.24.1)':
     dependencies:
       '@ai-sdk/provider': 1.0.7
       '@ai-sdk/provider-utils': 2.1.6(zod@3.24.1)
@@ -8829,20 +8801,6 @@ snapshots:
   graceful-fs@4.2.11: {}
 
   graphemer@1.4.0: {}
-
-  groq-sdk@0.12.0:
-    dependencies:
-      '@types/node': 18.19.75
-      '@types/node-fetch': 2.6.12
-      abort-controller: 3.0.0
-      agentkeepalive: 4.6.0
-      form-data-encoder: 1.7.2
-      formdata-node: 4.4.1
-      node-fetch: 2.7.0
-    transitivePeerDependencies:
-      - encoding
-
-  groq@3.74.1: {}
 
   hanji@0.0.5:
     dependencies:

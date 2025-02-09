@@ -9,19 +9,10 @@ import {
   updateTaskTool,
 } from "./services/taskTool";
 import { dateTimeTool, determineTargetTimezone } from "./services/dateTimeTool";
-import { groq } from "@ai-sdk/groq";
-import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
-import { deepseek } from "@ai-sdk/deepseek";
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
-
-// const lmstudio = createOpenAICompatible({
-//   name: "lmstudio",
-//   baseURL: "http://localhost:1234/v1",
-// });
 
 const google = createGoogleGenerativeAI();
 
-export const maxDuration = 300;
 
 export async function POST(req: Request) {
   console.log("🚀 Chat API route handler started");
@@ -102,18 +93,9 @@ export async function POST(req: Request) {
       execute: async (dataStream) => {
         console.log("🎯 Starting AI stream generation");
         try {
-          // First try with Ollama
           try {
-            console.log("📡 Attempting to use Ollama model...");
             const result = await streamText({
               model: google("gemini-2.0-flash"),
-              // model: lmstudio("qwen2.5-7b-instruct-1m"),
-              // model: deepseek("deepseek-chat"),
-              // model: groq("gemma2-9b-it"),
-              // model: lmstudio("qwen2-math-1.5b-instruct"),
-              // model: lmstudio("deepseek-math-7b-instruct"),
-              // model: lmstudio("qwen2-0.5b-instruct"),
-
               messages: [
                 { role: "system", content: systemPrompt },
                 ...conversation,
